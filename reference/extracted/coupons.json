@@ -1,0 +1,46 @@
+[
+  {
+    "code": "WELCOME10",
+    "label": "خصم ترحيبي ١٠٪",
+    "type": "percent",
+    "value": 10,
+    "minOrder": 0,
+    "active": true,
+    "startsAt": null,
+    "expiresAt": "2027-12-31",
+    "maxUses": null,
+    "uses": 0,
+    "categories": [],
+    "productIds": []
+  },
+  {
+    "code": "BOOKS15",
+    "label": "خصم ١٥٪ على الكتب",
+    "type": "percent",
+    "value": 15,
+    "minOrder": 0,
+    "active": true,
+    "startsAt": null,
+    "expiresAt": "2027-12-31",
+    "maxUses": null,
+    "uses": 0,
+    "categories": [
+      "books"
+    ],
+    "productIds": []
+  },
+  {
+    "code": "DEVX50",
+    "label": "خصم ٥٠ جنيه",
+    "type": "fixed",
+    "value": 50,
+    "minOrder": 500,
+    "active": true,
+    "startsAt": null,
+    "expiresAt": "2027-12-31",
+    "maxUses": null,
+    "uses": 0,
+    "categories": [],
+    "productIds": []
+  }
+]

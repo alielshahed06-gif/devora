@@ -1,0 +1,30 @@
+// Extracts seed data + embedded images from the preserved original HTML (read-only on the source).
+// Usage: node scripts/extract-reference.mjs
+import fs from 'node:fs'; import path from 'node:path'; import vm from 'node:vm';
+const root = path.resolve(import.meta.dirname, '..');
+const src = fs.readFileSync(path.join(root, 'reference/original-ui/dev-x-book-store-8-2.html'), 'utf8');
+const lines = src.split('\n');
+const idx = (re, from = 0) => { for (let i = from; i < lines.length; i++) if (re.test(lines[i])) return i; throw new Error('not found ' + re); };
+const bStart = idx(/^const branchNames = \[/), bEnd = idx(/^\];/, bStart);
+const mStart = idx(/^const MERCH = /), sStart = idx(/^const seed = \(\) => \(\{/), sEnd = idx(/^\}\);/, sStart);
+const code = lines.slice(bStart, bEnd + 1).join('\n') + '\n' + lines.slice(mStart, sEnd + 1).join('\n') + '\n;seed();';
+const seed = vm.runInContext(code, vm.createContext({}));
+const out = path.join(root, 'reference/extracted'); const assets = path.join(root, 'reference/original-ui/extracted-assets');
+fs.mkdirSync(out, { recursive: true }); fs.mkdirSync(path.join(assets, 'products'), { recursive: true });
+const ext = (u) => (u.match(/^data:image\/(\w+)/)?.[1] || 'bin').replace('jpeg', 'jpg');
+const save = (u, rel) => { const f = path.join(assets, rel + '.' + ext(u)); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, Buffer.from(u.split(',')[1], 'base64')); return path.relative(root, f); };
+const products = seed.products.map((p) => ({ ...p, images: p.images.map((u, i) => save(u, `products/${p.id}${i ? '-' + i : ''}`)) }));
+const hero = JSON.parse(lines[idx(/^const HERO_BOOKS = /)].replace(/^const HERO_BOOKS = /, '').replace(/;$/, ''));
+const heroFiles = Object.fromEntries(Object.entries(hero).map(([k, u]) => [k, save(u, `hero/${k}`)]));
+const cfgLine = (name) => lines.slice(idx(new RegExp('^\\s*' + name + ':'))).find(Boolean);
+const evalProp = (name) => vm.runInContext('({' + cfgLine(name).trim().replace(/,$/, '') + '})', vm.createContext({}))[name];
+const payLogos = evalProp('payLogos');
+const payFiles = Object.fromEntries(Object.entries(payLogos).filter(([, u]) => u).map(([k, u]) => [k, save(u, `payment/${k}`)]));
+const wp = evalProp('walletProviders').map((x) => ({ id: x.id, name: x.name, color: x.color, logo: save(x.logo, `wallet/${x.id}`) }));
+const bot = src.match(/class="botimg" src="(data:image\/[^"]+)"/);
+const botFile = bot ? save(bot[1], 'home/botimg') : null;
+const w = (n, v) => fs.writeFileSync(path.join(out, n), JSON.stringify(v, null, 2) + '\n');
+w('products.json', products); w('coupons.json', seed.coupons); w('branches.json', seed.branches);
+w('payment-methods.json', seed.paymentMethods); w('settings.json', seed.settings);
+w('assets-index.json', { hero: heroFiles, payment: payFiles, walletProviders: wp, homeBot: botFile });
+console.log({ products: products.length, coupons: seed.coupons.length, branches: seed.branches.length, hero: Object.keys(heroFiles).length, pay: Object.keys(payFiles).length, wallets: wp.length });

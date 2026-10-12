@@ -1,0 +1,1895 @@
+[
+  {
+    "id": "t1",
+    "category": "tshirts",
+    "name": "بولو نسائي بني بحواف كريمي",
+    "description": "بولو بني بياقة وحواف أكمام كريمي ولوجو Dev-X مطبوع على الصدر.",
+    "price": 350,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t1.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "بني",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "بني",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "بني",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "بني",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t2",
+    "category": "tshirts",
+    "name": "قميص مقلّم أزرق سماوي نصف كم",
+    "description": "قميص قطني مقلّم بلون أزرق سماوي وأبيض بلوجو Dev-X كحلي.",
+    "price": 350,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t2.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "أزرق سماوي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "أزرق سماوي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "أزرق سماوي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "أزرق سماوي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t3",
+    "category": "tshirts",
+    "name": "بولو بتصميم موجات أسود ورمادي",
+    "description": "بولو بتصميم موجات أسود ورمادي وأبيض، لوجو النجمة من الأمام والخلف.",
+    "price": 380,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t3.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "أسود ورمادي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "أسود ورمادي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "أسود ورمادي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "أسود ورمادي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t4",
+    "category": "tshirts",
+    "name": "بولو نسائي كحلي وبرتقالي بخطوط جانبية",
+    "description": "بولو كحلي بياقة برتقالي وخطوط جانبية، لوجو Dev-X على الصدر.",
+    "price": 350,
+    "salePrice": 300,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t4.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "كحلي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "كحلي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "كحلي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "كحلي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t5",
+    "category": "tshirts",
+    "name": "بولو نسائي كحلي كم طويل بياقة بيضاء",
+    "description": "بولو كحلي بكم طويل وياقة بيضاء وتطريز Dev-X أبيض.",
+    "price": 380,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t5.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "كحلي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "كحلي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "كحلي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "كحلي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t6",
+    "category": "tshirts",
+    "name": "بولو أبيض بتطريز كحلي",
+    "description": "بولو أبيض كلاسيك بتطريز Dev-X كحلي على الصدر.",
+    "price": 350,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t6.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "أبيض",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "أبيض",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "أبيض",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "أبيض",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t7",
+    "category": "tshirts",
+    "name": "تيشرت مقلّم عريض عنابي وأبيض",
+    "description": "تيشرت واسع بخطوط عريضة عنابي وأبيض ولوجو Dev-X.",
+    "price": 300,
+    "salePrice": 260,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t7.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "عنابي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "عنابي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "عنابي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "عنابي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t8",
+    "category": "tshirts",
+    "name": "بولو أسود محبوك مضلّع",
+    "description": "بولو أسود بخامة محبوكة مضلّعة ولوجو Dev-X رمادي فاتح.",
+    "price": 380,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t8.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t9",
+    "category": "tshirts",
+    "name": "سويت شيرت رمادي بنص سحاب",
+    "description": "سويت شيرت رمادي بياقة ونص سحاب ولوجو Dev-X أسود.",
+    "price": 550,
+    "salePrice": 480,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t9.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "رمادي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "رمادي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "رمادي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "رمادي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t10",
+    "category": "tshirts",
+    "name": "بولو نسائي بني وبرتقالي بخط جانبي",
+    "description": "بولو بني بياقة كريمي وخط جانبي كريمي وبرتقالي، لوجو Dev-X.",
+    "price": 350,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t10.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "بني",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "بني",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "بني",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "بني",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t11",
+    "category": "tshirts",
+    "name": "سويتر أزرق سماوي بضفائر",
+    "description": "سويتر تريكو أزرق سماوي بنقشة ضفائر وتطريز Dev-X كحلي.",
+    "price": 550,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t11.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "أزرق سماوي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "أزرق سماوي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "أزرق سماوي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "أزرق سماوي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t12",
+    "category": "tshirts",
+    "name": "تيشرت أسود بخطوط برتقالية على الأكتاف",
+    "description": "تيشرت أسود واسع بخطوط برتقالي وأبيض على الأكتاف ولوجو Dev-X.",
+    "price": 300,
+    "salePrice": 260,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t12.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t13",
+    "category": "tshirts",
+    "name": "سويت شيرت رمادي بنص سحاب (لوجو النجمة)",
+    "description": "سويت شيرت رمادي بنص سحاب ولوجو النجمة DEV-X أسود.",
+    "price": 550,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t13.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "رمادي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "رمادي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "رمادي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "رمادي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t15",
+    "category": "tshirts",
+    "name": "جاكيت فليس رمادي بنص سحاب",
+    "description": "فليس دافئ بياقة عالية ونص سحاب ولوجو Dev-X أسود.",
+    "price": 550,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t15.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "رمادي مائل للبيج",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "رمادي مائل للبيج",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "رمادي مائل للبيج",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "رمادي مائل للبيج",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t16",
+    "category": "tshirts",
+    "name": "جاكيت جينز كحلي بأزرار ذهبية",
+    "description": "جاكيت جينز كحلي بأزرار ذهبية وأكمام واسعة ولوجو Dev-X أبيض.",
+    "price": 750,
+    "salePrice": 650,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t16.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "كحلي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "كحلي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "كحلي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "كحلي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t17",
+    "category": "tshirts",
+    "name": "بولو نسائي أسود بياقة كريمي",
+    "description": "بولو أسود بياقة وحواف أكمام كريمي ولوجو Dev-X.",
+    "price": 350,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t17.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t18",
+    "category": "tshirts",
+    "name": "سويتر بيج بقميص وكرافتة بنية",
+    "description": "سويتر بيج بفتحة V وياقة قميص بيضاء وكرافتة بنية ولوجو Dev-X.",
+    "price": 520,
+    "salePrice": 450,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t18.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "بيج",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "بيج",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "بيج",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "بيج",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t19",
+    "category": "tshirts",
+    "name": "تيشرت أسود بتصميم برتقالي",
+    "description": "تيشرت أسود بتصميم برتقالي وأبيض ولوجو Dev-X على الصدر.",
+    "price": 300,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t19.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-10"
+  },
+  {
+    "id": "t20",
+    "category": "tshirts",
+    "name": "بلوزة سوداء بياقة وأكمام مقلّمة أزرق",
+    "description": "بلوزة سوداء بكم طويل مع ياقة وأساور مقلّمة أزرق فاتح ولوجو Dev-X.",
+    "price": 400,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t20.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "t21",
+    "category": "tshirts",
+    "name": "بولو عنابي بخطوط برتقالية وشعار «Build Your Future»",
+    "description": "بولو عنابي بخطوط برتقالي وكريمي على الجانب والأكمام ولوجو Dev-X.",
+    "price": 380,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t21.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "عنابي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "عنابي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "عنابي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "عنابي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "t22",
+    "category": "tshirts",
+    "name": "بلوزة عنابي بأكمام واسعة",
+    "description": "بلوزة عنابي بياقة مطوية وأكمام واسعة وتفصيلة جانبية ولوجو Dev-X.",
+    "price": 420,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t22.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "عنابي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "عنابي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "عنابي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "عنابي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "t23",
+    "category": "tshirts",
+    "name": "بولو أسود بياقة وحواف كريمي",
+    "description": "بولو أسود بياقة وحواف أكمام كريمي ولوجو Dev-X.",
+    "price": 350,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t23.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "o1",
+    "category": "other",
+    "name": "شنطة ظهر سوداء بتفاصيل ذهبية",
+    "description": "شنطة ظهر جلد سوداء بفلاب وسوست وتفاصيل ذهبية ولوجو Dev-X.",
+    "price": 600,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o1.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "o2",
+    "category": "other",
+    "name": "شنطة ظهر صغيرة بيج",
+    "description": "شنطة ظهر ميني بيج بسوست ذهبية ولوجو Dev-X كحلي.",
+    "price": 550,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o2.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "color": "بيج",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "o3",
+    "category": "other",
+    "name": "زجاجة مياه حافظة للحرارة",
+    "description": "زجاجة مياه معدنية بغطاء بلاستيك ولوجو Dev-X، متاحة أسود وأبيض.",
+    "price": 200,
+    "salePrice": 170,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o3.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "color": "أبيض",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "o4",
+    "category": "other",
+    "name": "حقيبة قماش بنقشة ورد أزرق",
+    "description": "حقيبة قماش كريمي بنقشة ورد أزرق وجيوب جانبية وميدالية قلب ولوجو Dev-X.",
+    "price": 160,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o4.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "color": "كريمي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "o5",
+    "category": "other",
+    "name": "كوب ترافل 40 أونص بمقبض",
+    "description": "كوب ترافل معزول بمقبض وغطاء بشاليمو ولوجو Dev-X كحلي.",
+    "price": 400,
+    "salePrice": 340,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o5.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "color": "كريمي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "o6",
+    "category": "other",
+    "name": "حقيبة قماش بتطريز ورد",
+    "description": "حقيبة قماش بجيب أمامي وتطريز ورد ملوّن ولوجو Dev-X.",
+    "price": 170,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o6.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "color": "كريمي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "o7",
+    "category": "other",
+    "name": "طقم حقيبة قماش ومقلمة بتطريز كرز",
+    "description": "حقيبة قماش ومقلمة بتطريز كرز صغير ولوجو Dev-X.",
+    "price": 220,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o7.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "color": "أبيض",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "o8",
+    "category": "other",
+    "name": "حقيبة قماش بتطريز باقة ورد",
+    "description": "حقيبة قماش بتطريز باقة ورد وشريطة وردي ولوجو Dev-X.",
+    "price": 170,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o8.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "color": "كريمي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "o9",
+    "category": "other",
+    "name": "حقيبة كتف سوداء بميدالية",
+    "description": "حقيبة كتف سوداء بجيوب كثيرة وحزام قابل للفك ومحفظة صغيرة ولوجو Dev-X.",
+    "price": 380,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o9.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "o10",
+    "category": "other",
+    "name": "كاب أبيض بتطريز كحلي",
+    "description": "كاب قطن أبيض بتطريز Dev-X كحلي.",
+    "price": 150,
+    "salePrice": 125,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o10.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "color": "أبيض",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "o11",
+    "category": "other",
+    "name": "كوب زجاج مموّج بغطاء خيزران وشريطة وردي",
+    "description": "كوب زجاج مموّج بغطاء خيزران وشاليمو زجاج وفيونكة وردي ولوجو Dev-X كحلي.",
+    "price": 130,
+    "salePrice": 110,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o11.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "شفاف",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "o12",
+    "category": "other",
+    "name": "شنطة كتف بني بسوستة",
+    "description": "شنطة كتف جلد بني بحزام قابل للتعديل ولوجو Dev-X معدن.",
+    "price": 480,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o12.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "بني",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "o13",
+    "category": "other",
+    "name": "شنطة كتف سوداء كبيرة",
+    "description": "شنطة كتف جلد أسود بحزام عريض قابل للتعديل ولوجو Dev-X كحلي.",
+    "price": 550,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o13.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "o14",
+    "category": "other",
+    "name": "شنطة هوبو بني",
+    "description": "شنطة هوبو جلد بني بحزام دائري ولوجو Dev-X كحلي.",
+    "price": 480,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o14.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "بني",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "o15",
+    "category": "other",
+    "name": "شنطة كتف أبيض وأسود بتفاصيل ذهبية",
+    "description": "شنطة كتف بخامة كتان أبيض وحواف سوداء ولوجو Dev-X ذهبي.",
+    "price": 450,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o15.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "أبيض وأسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "o16",
+    "category": "other",
+    "name": "مج سيراميك بيج برسمة غزال",
+    "description": "مج سيراميك بيج منقّط برسمة غزال صغير ولوجو Dev-X كحلي.",
+    "price": 110,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o16.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "بيج",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "o17",
+    "category": "other",
+    "name": "مج وردي بعبارة «وأن ليس للإنسان إلا ما سعى»",
+    "description": "مج سيراميك وردي بتصميم كرز وفيونكات وعبارة بخط عربي ولوجو Dev-X.",
+    "price": 110,
+    "salePrice": 95,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o17.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "وردي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "o18",
+    "category": "other",
+    "name": "فنجان وصحن سيراميك بورد وردي",
+    "description": "فنجان وصحن سيراميك أبيض بورد وردي مرسوم يدويًا ولوجو Dev-X.",
+    "price": 140,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o18.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "أبيض",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "o19",
+    "category": "other",
+    "name": "مج سيراميك بفيونكة وقلوب وردي",
+    "description": "مج سيراميك كريمي بفيونكة بارزة وقلوب وردي ومقبض مجدول ولوجو Dev-X.",
+    "price": 120,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o19.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "كريمي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "n1",
+    "category": "notebooks",
+    "name": "نوت بوك سبايرال بفيونكات عنابي",
+    "description": "نوت بوك سبايرال بغلاف أبيض بفيونكات وقلوب عنابي وأستك ولوجو Dev-X.",
+    "price": 95,
+    "salePrice": 80,
+    "images": [
+      "reference/original-ui/extracted-assets/products/n1.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "عنابي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "n2",
+    "category": "notebooks",
+    "name": "مجموعة نوت بوك سبايرال وردي",
+    "description": "نوت بوك سبايرال بتصاميم وردي: كاروهات، ورق شجر، سادة، وقلوب، ولوجو Dev-X.",
+    "price": 160,
+    "salePrice": 140,
+    "images": [
+      "reference/original-ui/extracted-assets/products/n2.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "كاروهات",
+        "stock": 10
+      },
+      {
+        "color": "ورق شجر",
+        "stock": 10
+      },
+      {
+        "color": "وردي سادة",
+        "stock": 10
+      },
+      {
+        "color": "قلوب",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "n3",
+    "category": "notebooks",
+    "name": "نوت بوك سبايرال بكرز وفيونكات",
+    "description": "نوت بوك سبايرال وردي بنقشة كرز وفيونكات وقلوب ولوجو Dev-X.",
+    "price": 90,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/n3.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "وردي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "o20",
+    "category": "other",
+    "name": "ورقة ستيكرز برمجة (1)",
+    "description": "ورقة ستيكرز للمبرمجين: Hello World وCSS وHTML وGame Over وغيرها.",
+    "price": 50,
+    "salePrice": 40,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o20.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "ملوّن",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "o21",
+    "category": "other",
+    "name": "ورقة ستيكرز برمجة (2)",
+    "description": "ورقة ستيكرز للمبرمجين: Girl Code وPython وCtrl+Z وغيرها.",
+    "price": 50,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o21.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "ملوّن",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "o22",
+    "category": "other",
+    "name": "ستيكر Hello World",
+    "description": "ستيكر بتصميم كود HTML وعبارة Hello World.",
+    "price": 15,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o22.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "ملوّن",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "o23",
+    "category": "other",
+    "name": "ستيكر لغات البرمجة",
+    "description": "ستيكر سحابة كلمات بأسماء لغات البرمجة.",
+    "price": 15,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o23.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "ملوّن",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "o24",
+    "category": "other",
+    "name": "ستيكر بطارية 1%",
+    "description": "ستيكر بطارية 1% بتصميم بسيط.",
+    "price": 15,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o24.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "ملوّن",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-12"
+  },
+  {
+    "id": "b1",
+    "category": "books",
+    "name": "الذكاء الاصطناعي ببساطة",
+    "description": "دليلك للمعرفة في عالم الذكاء الاصطناعي: ما هو الذكاء الاصطناعي، مفاهيم أساسية وتطبيقات عملية، أدوات وتقنيات، ومستقبل الذكاء الاصطناعي.",
+    "price": 180,
+    "salePrice": 150,
+    "images": [
+      "reference/original-ui/extracted-assets/products/b1.jpg"
+    ],
+    "attrs": {
+      "author": "",
+      "edition": ""
+    },
+    "variants": [
+      {
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-13"
+  },
+  {
+    "id": "b2",
+    "category": "books",
+    "name": "التعفّن الدماغي",
+    "description": "كيف تُدمر وسائل التواصل الاجتماعي عقلك؟ فهم أعمق لحياة رقمية أكثر توازنًا.",
+    "price": 200,
+    "salePrice": 170,
+    "images": [
+      "reference/original-ui/extracted-assets/products/b2.jpg"
+    ],
+    "attrs": {
+      "author": "",
+      "edition": ""
+    },
+    "variants": [
+      {
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-13"
+  },
+  {
+    "id": "b3",
+    "category": "books",
+    "name": "Computer Science: Object Oriented Programming (C++) — Grade 8",
+    "description": "كتاب علوم الحاسب للصف الثامن: البرمجة الكائنية باستخدام C++.",
+    "price": 250,
+    "salePrice": 210,
+    "images": [
+      "reference/original-ui/extracted-assets/products/b3.jpg"
+    ],
+    "attrs": {
+      "author": "",
+      "edition": ""
+    },
+    "variants": [
+      {
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-13"
+  },
+  {
+    "id": "o25",
+    "category": "other",
+    "name": "حقيبة قماش بوجه مبتسم",
+    "description": "حقيبة قماش بوجه مبتسم ولوجو Dev-X، متاحة بيج وأسود.",
+    "price": 150,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o25.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "بيج",
+        "stock": 10
+      },
+      {
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-13"
+  },
+  {
+    "id": "o26",
+    "category": "other",
+    "name": "شنطة سحب سوداء بجيب سوستة",
+    "description": "شنطة ظهر قماش سوداء بحبل سحب وجيب أمامي بسوستة ولوجو Dev-X أبيض.",
+    "price": 120,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o26.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-14"
+  },
+  {
+    "id": "o27",
+    "category": "other",
+    "name": "شنطة سحب بيضاء بلوجو Dev-X",
+    "description": "شنطة سحب بيضاء خفيفة بحواف سوداء وحبل أسود ولوجو Dev-X أسود، متاحة بحجمين.",
+    "price": 90,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o27.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "size": "كبير",
+        "color": "أبيض",
+        "stock": 10
+      },
+      {
+        "size": "صغير",
+        "color": "أبيض",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-14"
+  },
+  {
+    "id": "o28",
+    "category": "other",
+    "name": "شنطة سحب سوداء بلوجو جانبي",
+    "description": "شنطة سحب سوداء بخامة مقاومة للماء وحبلين للحمل ولوجو Dev-X أبيض في الزاوية.",
+    "price": 100,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o28.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-14"
+  },
+  {
+    "id": "n4",
+    "category": "notebooks",
+    "name": "نوت بوك أسود بغلاف سميك وأستك",
+    "description": "نوت بوك أسود بغلاف سميك وأستك وشريطة فاصلة وحامل قلم، ولوجو Dev-X بارز.",
+    "price": 120,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/n4.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-14"
+  },
+  {
+    "id": "n5",
+    "category": "notebooks",
+    "name": "نوت بوك بغلاف ناعم بأستك (3 ألوان)",
+    "description": "نوت بوك بغلاف ناعم وأستك ولوجو Dev-X، متاح بيج ورمادي وأسود.",
+    "price": 110,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/n5.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "بيج",
+        "stock": 10
+      },
+      {
+        "color": "رمادي",
+        "stock": 10
+      },
+      {
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-14"
+  },
+  {
+    "id": "t24",
+    "category": "tshirts",
+    "name": "تيشرت كحلي بلوجو Dev-X كبير",
+    "description": "تيشرت قطن كحلي بقصّة كلاسيك ولوجو Dev-X أبيض على الصدر.",
+    "price": 280,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t24.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "كحلي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "كحلي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "كحلي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "كحلي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-15"
+  },
+  {
+    "id": "t25",
+    "category": "tshirts",
+    "name": "تيشرت كريمي بحواف بنية",
+    "description": "تيشرت كريمي بياقة وحواف أكمام بني وتطريز صغير ولوجو Dev-X.",
+    "price": 320,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t25.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "كريمي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "كريمي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "كريمي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "كريمي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-15"
+  },
+  {
+    "id": "t26",
+    "category": "tshirts",
+    "name": "بولو رمادي غامق محبوك مضلّع",
+    "description": "بولو رمادي غامق بخامة محبوكة مضلّعة وياقة V ولوجو Dev-X أبيض.",
+    "price": 380,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t26.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "رمادي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "رمادي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "رمادي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "رمادي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-15"
+  },
+  {
+    "id": "t27",
+    "category": "tshirts",
+    "name": "سويتر كريمي بخطوط أخضر ونص سحاب",
+    "description": "سويتر تريكو كريمي بخطوط أخضر غامق وياقة بنص سحاب ولوجو Dev-X أخضر.",
+    "price": 550,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t27.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "كريمي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "كريمي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "كريمي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "كريمي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-15"
+  },
+  {
+    "id": "t28",
+    "category": "tshirts",
+    "name": "بولو أسود مضلّع بسوستة",
+    "description": "بولو أسود مضلّع بياقة وسوستة قصيرة ولوجو Dev-X أبيض.",
+    "price": 400,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t28.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-15"
+  },
+  {
+    "id": "t29",
+    "category": "tshirts",
+    "name": "تيشرت عنابي بلوجو جانبي",
+    "description": "تيشرت قطن عنابي بقصّة واسعة ولوجو Dev-X أبيض على الصدر.",
+    "price": 280,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t29.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "عنابي",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "عنابي",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "عنابي",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "عنابي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-15"
+  },
+  {
+    "id": "t30",
+    "category": "tshirts",
+    "name": "بولو أسود تريكو بياقة مفتوحة",
+    "description": "بولو أسود تريكو بياقة مفتوحة ولوجو Dev-X أبيض.",
+    "price": 380,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/t30.jpg"
+    ],
+    "attrs": {
+      "material": ""
+    },
+    "variants": [
+      {
+        "size": "S",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "أسود",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-15"
+  },
+  {
+    "id": "o29",
+    "category": "other",
+    "name": "مج أبيض بحافة ومقبض أسود",
+    "description": "مج سيراميك أبيض من برّه وأسود من جوّه بمقبض أسود ولوجو Dev-X أسود.",
+    "price": 110,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o29.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "أبيض",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-15"
+  },
+  {
+    "id": "o30",
+    "category": "other",
+    "name": "مج أسود مطفي بلوجو Dev-X",
+    "description": "مج سيراميك أسود مطفي بمقبض كبير ولوجو Dev-X أبيض.",
+    "price": 110,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o30.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "أسود",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-15"
+  },
+  {
+    "id": "o31",
+    "category": "other",
+    "name": "كاب تراكر أبيض وبني",
+    "description": "كاب تراكر بواجهة فوم بيضاء وشبك وحافة بني ولوجو Dev-X بني.",
+    "price": 140,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/o31.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "أبيض وبني",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-15"
+  },
+  {
+    "id": "n6",
+    "category": "notebooks",
+    "name": "نوت بوك رمادي فاتح مع قلم",
+    "description": "نوت بوك بغلاف رمادي فاتح ناعم مع قلم متناسق ولوجو Dev-X أسود.",
+    "price": 150,
+    "salePrice": null,
+    "images": [
+      "reference/original-ui/extracted-assets/products/n6.jpg"
+    ],
+    "attrs": {},
+    "variants": [
+      {
+        "color": "رمادي",
+        "stock": 10
+      }
+    ],
+    "createdAt": "2026-10-15"
+  }
+]

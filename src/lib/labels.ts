@@ -1,0 +1,6 @@
+export const ORDER_STATUS_AR: Record<string, string> = { CONFIRMED: 'تم استلام الطلب', PREPARING: 'جاري التجهيز', OUT_FOR_DELIVERY: 'خرج للتوصيل', READY_FOR_PICKUP: 'جاهز للاستلام', DELIVERED: 'تم التسليم', CANCELLED: 'ملغي' };
+export const PAYMENT_STATUS_AR: Record<string, string> = { AWAITING_PAYMENT: 'في انتظار الدفع', PENDING_REVIEW: 'قيد مراجعة الدفع', PAID: 'تم الدفع' };
+export const PAYMENT_METHOD_AR: Record<string, string> = { COD: 'الدفع عند الاستلام', FAWRY: 'فوري', INSTAPAY: 'إنستا باي', WALLET: 'محفظة إلكترونية', VODAFONE_CASH: 'فودافون كاش', ORANGE_CASH: 'أورنج كاش', ETISALAT_CASH: 'اتصالات كاش (e&)' };
+export const CONFIG_STATUS_AR: Record<string, string> = { NOT_CONFIGURED: 'غير مُهيّأ', SANDBOX: 'تجريبي', AWAITING_APPROVAL: 'بانتظار الاعتماد', READY: 'جاهز', DISABLED: 'معطّل', BLOCKED: 'محظور' };
+export const NEXT_STATUSES: Record<string, string[]> = { CONFIRMED: ['PREPARING', 'CANCELLED'], PREPARING: ['OUT_FOR_DELIVERY', 'READY_FOR_PICKUP', 'CANCELLED'], OUT_FOR_DELIVERY: ['DELIVERED', 'CANCELLED'], READY_FOR_PICKUP: ['DELIVERED', 'CANCELLED'], DELIVERED: [], CANCELLED: [] };
+export const dt = (v: string | Date) => new Date(v).toLocaleString('ar-EG', { dateStyle: 'medium', timeStyle: 'short' });

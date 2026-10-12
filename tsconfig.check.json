@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "plugins": [], "incremental": false, "noImplicitAny": false, "typeRoots": ["/opt/npm-tools/node_modules/@types"], "types": ["node"],
+    "paths": { "@/*": ["./src/*"], "@prisma/client": ["./scripts/typecheck-stubs/prisma-client.d.ts"] } },
+  "include": ["src/server/**/*.ts", "src/lib/**/*.ts", "src/app/api/**/*.ts", "tests/**/*.ts", "scripts/create-admin.ts", "scripts/typecheck-stubs/*.d.ts"]
+}

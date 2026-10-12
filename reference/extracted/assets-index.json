@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "b2": "reference/original-ui/extracted-assets/hero/b2.webp",
+    "b1": "reference/original-ui/extracted-assets/hero/b1.webp",
+    "b3": "reference/original-ui/extracted-assets/hero/b3.webp"
+  },
+  "payment": {
+    "instapay": "reference/original-ui/extracted-assets/payment/instapay.webp",
+    "fawry": "reference/original-ui/extracted-assets/payment/fawry.webp",
+    "wallet": "reference/original-ui/extracted-assets/payment/wallet.webp"
+  },
+  "walletProviders": [
+    {
+      "id": "vodafone",
+      "name": "Vodafone",
+      "color": "#E60000",
+      "logo": "reference/original-ui/extracted-assets/wallet/vodafone.webp"
+    },
+    {
+      "id": "we",
+      "name": "WE",
+      "color": "#5B2A86",
+      "logo": "reference/original-ui/extracted-assets/wallet/we.webp"
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "color": "#FF7900",
+      "logo": "reference/original-ui/extracted-assets/wallet/orange.webp"
+    }
+  ],
+  "homeBot": "reference/original-ui/extracted-assets/home/botimg.jpg"
+}

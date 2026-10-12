@@ -1,0 +1,396 @@
+// Dev-X Book Store — Plan C. Money = integer piasters (1 EGP = 100). See docs/project/DATABASE_SCHEMA.md
+// STAGE 2 STATUS: migration.sql (prisma/migrations/20261010000000_init) applied directly to the
+// hosted Supabase project "devx-book-store-planc" (eu-central-1) via the Supabase connector; all 21
+// tables verified present with correct grants. `prisma validate`/`generate` could NOT be run from the
+// build sandbox (binaries.prisma.sh is not reachable there) — run
+// `npx prisma validate && npx prisma generate` locally as the first step after applying this overlay,
+// since that sandbox's manual model<->table name diff is not a substitute for real schema-engine validation.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  // Pooled (Supavisor transaction mode, port 6543) — used by the app at runtime via the
+  // least-privilege devx_store_app role. pgbouncer=true in the URL disables prepared-statement
+  // caching, required for transaction-mode pooling.
+  url       = env("DATABASE_URL")
+  // Unpooled/session connection — used only by `prisma migrate`/`db push` for DDL.
+  // Must use a role with CREATE rights (devx_store_app intentionally does not have these).
+  directUrl = env("DIRECT_URL")
+}
+
+enum Role {
+  CUSTOMER
+  STAFF
+  ADMIN
+}
+enum AuthProvider {
+  LOCAL
+  GOOGLE
+  FACEBOOK
+}
+enum DeliveryMethod {
+  DELIVERY
+  PICKUP
+}
+enum OrderStatus {
+  CONFIRMED
+  PREPARING
+  OUT_FOR_DELIVERY
+  READY_FOR_PICKUP
+  DELIVERED
+  CANCELLED
+}
+enum PaymentStatus {
+  AWAITING_PAYMENT
+  PENDING_REVIEW
+  PAID
+}
+enum PaymentMethodCode {
+  COD
+  FAWRY
+  INSTAPAY
+  WALLET
+  VODAFONE_CASH
+  ORANGE_CASH
+  ETISALAT_CASH
+}
+
+// Verified read-only on live Supabase (owner report). Provider integration state; only READY may be offered at checkout.
+enum PaymentConfigStatus {
+  NOT_CONFIGURED
+  SANDBOX
+  AWAITING_APPROVAL
+  READY
+  DISABLED
+  BLOCKED
+}
+enum PaymentAttemptStatus {
+  SUBMITTED
+  ACCEPTED
+  REJECTED
+}
+enum CouponType {
+  PERCENT
+  FIXED
+}
+enum TicketType {
+  COMPLAINT
+  INQUIRY
+}
+enum TicketStatus {
+  RECEIVED
+  IN_PROGRESS
+  RESOLVED
+}
+enum RecoveryStatus {
+  OPEN
+  DONE
+  CLOSED
+}
+
+model User {
+  id               String        @id @default(cuid())
+  name             String
+  phone            String?       @unique // normalized 01XXXXXXXXX; null for social-only accounts
+  email            String?       @unique // stored lower-case
+  passwordHash     String?       // argon2/bcrypt only; never plaintext (original demo stored plaintext)
+  mustChangePassword Boolean     @default(false)
+  sessionGeneration Int           @default(0)
+  provider         AuthProvider  @default(LOCAL)
+  role             Role          @default(CUSTOMER)
+  prefOrderUpdates Boolean       @default(true)
+  prefOffers       Boolean       @default(false)
+  points           Int           @default(0)
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+  addresses        Address[]
+  orders           Order[]
+  reviews          Review[]
+  wishlist         WishlistItem[]
+  notifications    Notification[]
+  tickets          Ticket[]
+  auditLogs        AuditLog[]
+}
+
+model Address {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  label     String   @default("")
+  city      String   @default("") // free text in the original UI (no governorate selector exists in the source)
+  address   String
+  createdAt DateTime @default(now())
+  @@index([userId])
+}
+
+model Branch {
+  id      String  @id @default(cuid())
+  name    String  @unique
+  address String  @default("")
+  hours   String  @default("")
+  phone   String  @default("")
+  mapUrl  String  @default("")
+  active  Boolean @default(true)
+  pickupEnabled Boolean @default(true)
+  sort    Int     @default(0)
+  orders  Order[]
+}
+
+model Category {
+  id          String    @id // Stable slug referenced by products and existing orders.
+  name        String
+  description String    @default("")
+  imageUrl    String?
+  active      Boolean   @default(true)
+  sort        Int       @default(0)
+  products    Product[]
+}
+
+model Product {
+  id          String           @id @default(cuid())
+  legacyId    String?          @unique // original demo id e.g. t1, b2, o31
+  categoryId  String
+  category    Category         @relation(fields: [categoryId], references: [id])
+  name        String
+  description String           @default("")
+  price       Int              // piasters, > 0
+  salePrice   Int?             // piasters, < price when set
+  attrs       Json             @default("{}") // author/edition/material (empty in source)
+  active      Boolean          @default(true)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  images      ProductImage[]
+  variants    ProductVariant[]
+  reviews     Review[]
+  wishlist    WishlistItem[]
+  orderItems  OrderItem[]
+  @@index([categoryId, active])
+  @@index([createdAt])
+}
+
+model ProductImage {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String  // storage key/URL; Stage 2 decides storage (local public/ vs object storage)
+  alt       String  @default("")
+  sort      Int     @default(0)
+  @@index([productId, sort])
+}
+
+model ProductVariant {
+  id         String      @id @default(cuid())
+  productId  String
+  product    Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
+  size       String      @default("") // '' = not applicable (avoids NULL in unique key)
+  color      String      @default("")
+  priceOverride Int?     // piasters; when set, product salePrice is ignored for this variant (matches original quote())
+  stock      Int         @default(0) // CHECK (stock >= 0) in SQL
+  orderItems OrderItem[]
+  @@unique([productId, size, color])
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  rating    Int      // 1..5 CHECK in SQL
+  comment   String   @default("")
+  verified  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([productId, userId]) // one review per user per product (original upserts)
+}
+
+model WishlistItem {
+  userId    String
+  productId String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  @@id([userId, productId])
+}
+
+model Coupon {
+  code       String     @id // upper-case 3..20 [A-Z0-9_-]
+  label      String
+  type       CouponType
+  value      Int        // PERCENT: 1..100 ; FIXED: piasters
+  minOrder   Int        @default(0) // piasters
+  active     Boolean    @default(true)
+  startsAt   DateTime?
+  expiresAt  DateTime?
+  maxUses    Int?
+  uses       Int        @default(0)
+  categoryIds String[]  @default([])
+  productIds  String[]  @default([])
+  orders     Order[]
+}
+
+model DiscountTier {
+  id      String @id @default(cuid())
+  minTotal Int   @unique // piasters, applies to total after product discounts
+  ratePct Int    // 1..100
+}
+
+model PaymentMethodConfig {
+  code        PaymentMethodCode @id
+  name        String
+  description String            @default("")
+  enabled     Boolean           @default(true)
+  sort        Int               @default(0)
+  // SYNC NOTE: columns exist on live Supabase (applied outside Prisma history, migration 20261011180000 not in repo).
+  // Default/nullability below are ASSUMED (safe values) — confirm against the live column definitions before any migration.
+  status           PaymentConfigStatus @default(NOT_CONFIGURED)
+  integrationNotes String              @default("")
+}
+
+model StoreSetting {
+  key       String   @id // shippingFee, freeShippingMin (piasters), support.*, policies.*, payAccounts.* ...
+  value     Json
+  updatedAt DateTime @updatedAt
+}
+
+model Order {
+  id             String         @id @default(cuid())
+  number         Int            @unique @default(autoincrement()) // displayed as DX-<number> (original started at 1001)
+  userId         String?
+  user           User?          @relation(fields: [userId], references: [id], onDelete: SetNull)
+  customerName   String
+  customerPhone  String
+  deliveryMethod DeliveryMethod
+  deliveryCity   String?
+  deliveryAddress String?
+  branchId       String?
+  branch         Branch?        @relation(fields: [branchId], references: [id])
+  notes          String         @default("")
+  status         OrderStatus    @default(CONFIRMED)
+  paymentMethod  PaymentMethodCode
+  paymentStatus  PaymentStatus  @default(AWAITING_PAYMENT) // kept separate from fulfilment status
+  couponCode     String?
+  coupon         Coupon?        @relation(fields: [couponCode], references: [code])
+  subtotalOriginal Int
+  productDiscounts Int
+  tierRatePct    Int            @default(0)
+  tierDiscount   Int            @default(0)
+  couponDiscount Int            @default(0)
+  shippingFee    Int            @default(0)
+  total          Int
+  requestFingerprint String?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  items          OrderItem[]
+  history        OrderStatusHistory[]
+  payments       PaymentAttempt[]
+  tickets        Ticket[]
+  notifications  Notification[]
+  @@index([userId, createdAt])
+  @@index([userId, requestFingerprint, createdAt])
+  @@index([status])
+  @@index([paymentStatus])
+  @@index([customerPhone])
+}
+
+model OrderItem { // immutable price/name snapshot at purchase time
+  id         String          @id @default(cuid())
+  orderId    String
+  order      Order           @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId  String?
+  product    Product?        @relation(fields: [productId], references: [id], onDelete: SetNull)
+  variantId  String?
+  variant    ProductVariant? @relation(fields: [variantId], references: [id], onDelete: SetNull)
+  name       String
+  categoryId String
+  size       String          @default("")
+  color      String          @default("")
+  qty        Int
+  unitOriginal Int
+  unitSale   Int
+  lineOriginal Int
+  lineSale   Int
+  @@index([orderId])
+}
+
+model OrderStatusHistory {
+  id      String      @id @default(cuid())
+  orderId String
+  order   Order       @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  status  OrderStatus
+  at      DateTime    @default(now())
+  @@index([orderId, at])
+}
+
+model PaymentAttempt { // manual-reference flow in the source (InstaPay/Fawry/wallet); gateway fields added in a later stage
+  id          String               @id @default(cuid())
+  orderId     String
+  order       Order                @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  method      PaymentMethodCode
+  reference   String
+  senderPhone String               @default("")
+  status      PaymentAttemptStatus @default(SUBMITTED)
+  amount      Int                  // piasters expected at submission
+  submittedAt DateTime             @default(now())
+  reviewedAt  DateTime?
+  reviewedById String?
+  @@unique([method, reference]) // a transfer reference can back only one order
+  @@index([orderId])
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  orderId   String?
+  order     Order?   @relation(fields: [orderId], references: [id], onDelete: SetNull)
+  title     String
+  text      String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+  @@index([userId, read, createdAt])
+}
+
+model Ticket { // complaints & inquiries (support page)
+  id        String       @id @default(cuid())
+  type      TicketType   @default(COMPLAINT)
+  userId    String?
+  user      User?        @relation(fields: [userId], references: [id], onDelete: SetNull)
+  name      String
+  phone     String
+  orderId   String?
+  order     Order?       @relation(fields: [orderId], references: [id], onDelete: SetNull)
+  message   String
+  status    TicketStatus @default(RECEIVED)
+  reply     String?
+  createdAt DateTime     @default(now())
+  @@index([status, createdAt])
+}
+
+model PasswordRecoveryRequest { // admin-assisted recovery in the source; replace by token flow in auth stage
+  id         String         @id @default(cuid())
+  identifier String
+  name       String
+  contact    String         @default("")
+  status     RecoveryStatus @default(OPEN)
+  createdAt  DateTime       @default(now())
+  doneAt     DateTime?
+  @@index([status])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  actorId   String?
+  actor     User?    @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  action    String   // e.g. order.status.update, product.update, settings.update
+  entity    String
+  entityId  String?
+  before    Json?
+  after     Json?
+  createdAt DateTime @default(now())
+  @@index([entity, entityId])
+  @@index([createdAt])
+}

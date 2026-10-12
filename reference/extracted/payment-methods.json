@@ -1,0 +1,26 @@
+[
+  {
+    "id": "cod",
+    "name": "الدفع عند الاستلام",
+    "description": "تدفع قيمة الطلب عند استلامه.",
+    "enabled": true
+  },
+  {
+    "id": "fawry",
+    "name": "فوري",
+    "description": "ادفع من أي ماكينة أو تطبيق فوري بكود الطلب.",
+    "enabled": true
+  },
+  {
+    "id": "instapay",
+    "name": "إنستا باي",
+    "description": "حوّل المبلغ واكتب رقم العملية.",
+    "enabled": true
+  },
+  {
+    "id": "wallet",
+    "name": "المحفظة الإلكترونية",
+    "description": "حوّل على المحفظة واكتب رقم العملية.",
+    "enabled": true
+  }
+]

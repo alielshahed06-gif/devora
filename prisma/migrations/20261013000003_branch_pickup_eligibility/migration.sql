@@ -1,0 +1,1 @@
+ALTER TABLE "Branch" ADD COLUMN "pickupEnabled" BOOLEAN NOT NULL DEFAULT true;

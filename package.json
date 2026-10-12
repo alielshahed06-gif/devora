@@ -1,0 +1,44 @@
+{
+  "name": "devx-book-store-planc",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dev-X Book Store — Plan C full-stack (Next.js App Router + Prisma + PostgreSQL)",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:integration": "node scripts/run-integration.mjs",
+    "extract:reference": "node scripts/extract-reference.mjs",
+    "db:validate": "prisma validate",
+    "db:generate": "prisma generate",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:seed:local": "node --env-file=.env --import tsx scripts/seed-local.ts",
+    "admin:bootstrap:local": "node --env-file=.env --import tsx scripts/bootstrap-local-admin.ts",
+    "admin:reset:local": "node --env-file=.env --import tsx scripts/reset-local-admin.ts",
+    "db:verify": "bash scripts/verify-migration.sh",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "6.12.0",
+    "next": "16.4.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.18.0",
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9",
+    "eslint": "9.36.0",
+    "eslint-config-next": "16.4.0",
+    "prisma": "6.12.0",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2"
+  }
+}
